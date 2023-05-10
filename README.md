@@ -97,32 +97,60 @@ In this dropped unwanted columns "speakers", "title", "recorded_date", "publishe
          **MSE** 0.11420981723987313
 
          **RMSE** 0.33794943000377015 
-2) Ridge regression
-3) Lasso regression
-Conclusion:
-City hotel has highest adr.
-City hotel has longer waiting time.
-GDS distribution channel contributed more to ADR in city hotel.
-Optimal stay length in both hotel type is less than 7 days.
-Repeated guests do not cancel there bookings.
-Number of people increases adr aslo going to increase.
-Conclusion from correlation heatmap
-arrival_date_year and arrival_date_week_number columns has negative correlation which is -0.51.
-stays_in_week_nights and total_stay has positive correlation which is 0.95.
-Overall conclusion:
-City hotel has almost 60% bookings and resort hotel has 40% bookings.
-Agent no. 9 made most bookins and those bookings are 28721.
-Percentage of repeated guest is just 4%.
-Room type A is most preferred room type 46283 guests preferred A room type.
-BB type food is most preferred food type and 67907 preferred this food.
-Auust month has maximum number of bookings and those bookings are 11242.
-TA/TO distribution channel is mostly prefderred channel and the bookings are 69028.
-2016 year has 42313 bookings.
-City hotel has highest ADR and trhe average ADR is 111.27.
-City hotel has longer waiting time means city hotel is busy hotel type.
-GDS contribution channel contributed more to ADR in order to incerease income in city hotel.
-Optimal stay length in both hotel type is leaa than 7 days.
-Repeated do not cancel there bookings.
-The number of people increases ADR increases.
-arrival_date_year and arrival_date_week_number columns has negative correlation which is -0.51.
-stays_in_week_nights and total_stay has positive correlation which is 0.95.
+### 2) Ridge regression
+      * Training data R2 and Adjusted R2 score is 0.8872978749437399
+         0.8870312595752391 respectively.
+
+
+      * Testing data R2 and Adjusted R2 score is 0.8849257240863323
+        0.8841054390238112 respectively.
+
+
+      * Cross-validation score and best params are as follows:
+
+         **The best parameters** is {'alpha': 0.001}
+
+          **cross-validation score** is 0.884838466969393
+
+
+     * The performance metrics are as follows:
+
+         **MAE** 0.27379874378382013
+
+         **MSE** 0.11422278721950664
+
+         **RMSE** 0.3379686186904143
+### 3) Lasso regression
+       * Training data R2 and Adjusted R2 Score as follows:
+
+    **R2 score** 0.8856772370433994
+
+    **Adjusted R2 score** 0.885406787790038
+
+
+* Testing data R2 and Adjusted R2 Score as follows:
+
+    **R2 score** 0.8824740403319331
+
+    **Adjusted R2 score** 0.8816362789086374
+
+
+* Cross-validation score and best params are as follows:
+
+    **The best parameters** is {'alpha': 1e-08}
+
+    **cross-validation score** 0.8832671645096054
+
+
+* The performance metrics are as follows:
+
+    **MAE** 0.275916310909462
+
+    **MSE** 0.11665632981262587
+
+    **RMSE** 0.3415498935918819
+    
+### Conclusion:
+The performance metrics of all three models (linear regression, Ridge regression, and Lasso regression) are very similar, with R2 scores ranging from 0.885 to 0.888 and RMSE values ranging from 0.338 to 0.342. However, Ridge regression and linear regression have slightly better R2 scores and lower RMSE values compared to Lasso regression.
+
+Therefore, based on the performance metrics, both linear regression and Ridge regression appear to be good choices for this dataset.
